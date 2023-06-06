@@ -1,0 +1,1495 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+@mixin btn {
+  background-color: #000;
+  color: #fff;
+  border-radius: 0;
+  margin-top: 20px;
+  border: none;
+  // font-weight: 400;
+  font-family: "function";
+  font-size: 27px;
+}
+
+
+nav {
+  position: absolute;
+
+  .navbar {
+    width: 100vw;
+    padding: 34px 57px;
+    display: flex;
+    justify-content: space-between;
+
+    .nav-items {
+      display: flex;
+      gap: 60px;
+
+      .burger {
+        width: 50.73px;
+        height: 39.73px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        div {
+          width: 50.73px;
+          height: 5px;
+          background-color: #000;
+          border-radius: 5px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 22px;
+            height: 5px;
+            background-color: #000;
+            border-radius: 5px;
+            top: 0;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 22px;
+            height: 5px;
+            background-color: #000;
+            border-radius: 5px;
+            bottom: 0;
+            right: 0;
+
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+#hero {
+  color: #000;
+
+  .hero-inner {
+    background-image: url(/images/Banner\ BG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+    h1 {
+      font-family: "playfair";
+      font-size: 68px;
+      padding: 325px 0 0 71px;
+      line-height: 90.64px;
+      font-weight: 700;
+    }
+
+    p {
+      font-family: "function";
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 29.45px;
+      margin-left: 71px;
+    }
+
+    .one {
+      @include btn;
+      margin-left: 71px;
+      width: 223px;
+      height: 56px;
+
+    }
+
+    .two {
+      @include btn;
+      margin-left: 40px;
+      width: 223px;
+      height: 56px;
+    }
+  }
+}
+
+#latest {
+  margin-top: 150px;
+  font-family: "function";
+
+  h1 {
+
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 58.9px;
+    border-bottom: 2px solid #000;
+  }
+
+  .image {
+    margin-top: 40px;
+
+    p {
+      font-size: 25px;
+      padding-top: 20px;
+
+      span {
+        font-size: 20px;
+        margin-left: 71px;
+        font-family: "redhat";
+      }
+    }
+
+    .text {
+      font-size: 16px;
+
+    }
+  }
+
+  .clicks {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+
+    .arrow {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+
+      span {
+
+        font-size: 27px;
+        font-family: "function";
+        color: rgba(0, 0, 0, 0.59);
+      }
+    }
+
+
+    .three {
+      @include btn;
+      font-size: 27px;
+      width: 223px;
+      height: 56px;
+    }
+
+  }
+
+
+}
+
+#best-seller {
+  margin-top: 150px;
+  font-family: "function";
+
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 58.9px;
+    border-bottom: 2px solid #000;
+  }
+
+  .image {
+    margin-top: 20px;
+
+    p {
+      font-size: 45px;
+      padding-top: 20px;
+
+      span {
+        font-family: "redhat";
+        font-size: 30px;
+        margin-left: 219px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+#best {
+  margin-top: 150px;
+
+  .images {
+    color: #fff;
+    overflow: auto;
+    height: 100vh;
+    display: grid;
+    gap: 20px;
+
+    .orders {
+      position: relative;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    .text {
+      position: absolute;
+      top: 264px;
+      left: 200px;
+
+      .ptext {
+        font-family: "playfair";
+        font-size: 25px;
+      }
+
+      p {
+        padding-top: 13px;
+        font-size: 45px;
+        font-family: "redhat";
+      }
+    }
+
+  }
+
+
+}
+
+#bags {
+  margin-top: 150px;
+  font-family: "function";
+
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 58.9px;
+    border-bottom: 2px solid #000;
+
+    span {
+      font-size: 113px;
+      font-family: "itc";
+    }
+  }
+
+  .image {
+    margin-top: 40px;
+
+    p {
+      font-size: 25px;
+      padding-top: 20px;
+
+      span {
+        font-size: 20px;
+        margin-left: 223px;
+        font-family: "redhat";
+      }
+    }
+
+    .text {
+      font-size: 16px;
+
+    }
+  }
+
+  .click {
+    padding-top: 60px;
+    text-align: center;
+
+    .three {
+      @include btn;
+      width: 223px;
+      height: 56px;
+
+    }
+
+  }
+
+}
+
+#watches {
+  margin-top: 150px;
+  font-family: "function";
+  background-color: #F9F9F9;
+
+  .text {
+    text-align: center;
+
+    h1 {
+      padding-top: 30px;
+      font-size: 60px;
+    }
+
+    p {
+      margin-top: 30px;
+      font-size: 25px;
+      line-height: 29.45px;
+    }
+
+    .click {
+      padding-top: 30px;
+      text-align: center;
+
+      .three {
+        @include btn;
+        margin-bottom: 60px;
+        width: 313px;
+        height: 56px;
+
+      }
+
+    }
+  }
+}
+
+#suits {
+  margin-top: 150px;
+  font-family: "function";
+
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 58.9px;
+    border-bottom: 2px solid #000;
+  }
+
+  .image {
+    margin-top: 40px;
+
+    p {
+      font-size: 25px;
+      padding-top: 20px;
+
+      span {
+        font-size: 20px;
+        margin-left: 105px;
+        font-family: "redhat";
+      }
+    }
+
+  }
+
+  .clicks {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+
+    .arrow {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+
+      span {
+
+        font-size: 27px;
+        font-family: "function";
+        color: rgba(0, 0, 0, 0.59);
+      }
+    }
+
+
+    .three {
+      @include btn;
+      font-size: 27px;
+      width: 223px;
+      height: 56px;
+    }
+
+  }
+}
+
+#tommy {
+  margin-top: 150px;
+  font-family: "function";
+  background-color: #F9F9F9;
+  // height: 60vh;
+
+  .text {
+    text-align: center;
+
+    h1 {
+      padding-top: 30px;
+      font-size: 60px;
+    }
+
+    p {
+      margin-top: 30px;
+      font-size: 25px;
+      line-height: 29.45px;
+    }
+
+    .click {
+      padding-top: 30px;
+      text-align: center;
+
+      .three {
+        @include btn;
+        margin-bottom: 60px;
+        width: 313px;
+        height: 56px;
+
+      }
+
+    }
+  }
+}
+
+#newsletter {
+  margin-top: 81px;
+  background-color: #F9F9F9;
+  width: 100%;
+  height: 80vh;
+  font-family: "function";
+
+  .text {
+    h1 {
+      font-size: 60px;
+      margin-top: 150px;
+      margin-left: 100px;
+    }
+  }
+
+  .ptext {
+    p {
+      font-size: 25px;
+      line-height: 29.45px;
+      margin-top: 150px;
+    }
+  }
+
+  form {
+    padding-top: 50px;
+    margin-left: 100px;
+    display: flex;
+
+    #email {
+      width: 70%;
+      height: 80px;
+      background-color: #00000063;
+      border: none;
+      padding-left: 30px;
+      font-size: 25px;
+
+    }
+
+
+
+    #submit {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      width: 25%;
+      height: 80px;
+      font-size: 27px;
+
+    }
+  }
+
+}
+
+footer {
+  // margin-top: 180px;
+  background-color: #000;
+  color: #fff;
+  height: 70vh;
+  padding-top: 120px;
+
+
+
+
+  .content {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding-left: 200px;
+    // margin: 0 auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 40px;
+      padding-top: 50px;
+      font-family: "playfair";
+    }
+
+    .text {
+      p {
+        padding-top: 20px;
+        font-size: 25px;
+        line-height: 29.45px;
+        margin-right: 20px;
+        font-family: "function";
+      }
+    }
+
+    ul {
+      margin-top: 20px;
+      font-family: "function";
+      margin-bottom: 50px;
+      line-height: 29.45px;
+
+      li {
+        font-size: 25px;
+
+      }
+    }
+  }
+
+  .ptext {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 25px;
+    font-family: "function";
+  }
+}
+
+
+// large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+  #hero {
+    .hero-inner {
+      h1 {
+        padding-top: 400px;
+      }
+    }
+  }
+
+  #latest {
+
+    .image {
+      p {
+        font-size: 20px;
+
+
+        span {
+          font-size: 15px;
+          margin-left: 30px;
+        }
+      }
+
+    }
+  }
+
+  #best-seller {
+    .image {
+
+      p {
+
+        span {
+          margin-left: 79px;
+        }
+      }
+
+    }
+
+  }
+
+  #best {
+
+    .images {
+
+      .text {
+        top: 164px;
+        left: 40px;
+      }
+
+    }
+  }
+
+  #bags {
+    .image {
+      p {
+        span {
+          margin-left: 110px;
+        }
+      }
+    }
+  }
+
+  #suits {
+    .image {
+      p {
+        span {
+          margin-left: 17px;
+        }
+      }
+    }
+  }
+
+  #newsletter {
+
+    .text {
+      h1 {
+        margin-left: 30px;
+      }
+    }
+
+    form {
+      padding-top: 30px;
+      margin-left: 30px;
+
+      #email {
+        width: 60%;
+      }
+
+
+
+      #submit {
+        width: 35%;
+      }
+    }
+
+  }
+
+  footer {
+    height: 60vh;
+  padding-top: 150px;
+  
+    .content {
+      padding-left: 70px;
+    }
+  }
+
+}
+
+//  Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+
+  nav {
+
+    .navbar {
+
+      .nav-items {
+
+        .burger {
+          width: 50.73px;
+          height: 29.73px;
+
+        }
+      }
+    }
+  }
+
+  #hero {
+
+    .hero-inner {
+
+      h1 {
+        font-size: 45px;
+        padding-top: 260px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .one {
+        background-color: #000;
+        width: 193px;
+        height: 56px;
+        color: #fff;
+        border-radius: 0;
+        margin-top: 20px;
+        border: none;
+        font-family: "function";
+        margin-left: 71px;
+      }
+
+      .two {
+        background-color: #000;
+        width: 193px;
+        height: 56px;
+        color: #fff;
+        border-radius: 0;
+        margin-top: 20px;
+        border: none;
+        // font-weight: 400;
+        font-family: "function";
+        margin-left: 10px;
+      }
+    }
+  }
+
+  #latest {
+
+    .image {
+      p {
+        font-size: 15px;
+
+
+        span {
+          font-size: 10px;
+          margin-left: 23px;
+        }
+      }
+
+      .text {
+        font-size: 10px;
+      }
+
+    }
+
+  }
+
+  #best-seller {
+
+    .image {
+      p {
+        font-size: 30px;
+
+        span {
+          font-size: 20px;
+          margin-left: 87px;
+        }
+      }
+    }
+  }
+
+  #best {
+
+    .images {
+
+      .text {
+        top: 164px;
+        left: 40px;
+
+        .ptext {
+          font-size: 17px;
+        }
+
+        p {
+
+          font-size: 35px;
+        }
+      }
+
+    }
+  }
+
+  #bags {
+    .image {
+      p {
+        span {
+          margin-left: 35px;
+        }
+      }
+    }
+  }
+
+  #watches{
+    .image{
+      .text{
+        p{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  #suits {
+
+    .image {
+      p {
+        font-size: 15px;
+
+
+        span {
+          font-size: 10px;
+          margin-left: 45px;
+        }
+      }
+
+    }
+  }
+
+  #tommy{
+    .image{
+      .text{
+        p{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  #newsletter {
+    display: flex;
+    flex-flow: column;
+    // justify-content: center;
+    align-items: center;
+    .text {
+      h1 {
+        margin-left: 30px;
+        font-size: 40px;
+
+      }
+    }
+
+    .ptext {
+      p {
+        margin-right: 50px;
+        font-size: 20px;
+
+      }
+    }
+
+    form {
+      margin-left: 20px;
+
+      #email {
+        width: 60%;
+      }
+
+      #submit {
+        width: 50%;
+      }
+    }
+  }
+
+  footer {
+    height: 70vh;
+    padding-top: 120px;
+
+    .content{
+      padding-left: 30px;
+      .text{
+       
+        p{
+          font-size: 20px;
+        }
+    }
+
+    .text-one{
+      li{
+        font-size: 20px;
+      }
+    }
+
+    .text-two{
+      li{
+        font-size: 20px;
+      }
+    }
+    
+    }
+  }
+}
+
+// Small devices (landscape phone, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+  nav {
+
+    .navbar {
+      img{
+        width: 50px;
+      }
+
+      .nav-items {
+
+        img{
+          width: 35px;
+        }
+
+        .burger {
+          width:30px;
+          height: 30px;
+
+        div {
+          width: 30px;
+          
+          &::before {
+            content: '';
+            width: 30px;
+          }
+
+          &::after {
+            content: '';
+            width: 30px; 
+
+          }
+        }
+      
+
+        }
+      }
+    }
+  }
+
+  #hero{
+   
+    .hero-inner{
+      
+     h1{
+      font-size: 40px;
+      padding-top: 280px;
+     }
+
+     p{
+      font-size: 18px;
+     }
+
+     .one{
+      width: 173px;
+      height: 56px;
+      font-size: 20px;
+     }
+
+     .two {
+      margin-left: 10px;
+      width: 173px;
+      height: 56px;
+      font-size: 20px;
+    }
+    }
+    
+  }
+
+  #latest{
+    .image{
+      text-align: center;
+
+      .text{
+        text-align: start;
+        padding-left: 110px;
+      }
+    }
+
+    .clicks{
+
+      .arrow{
+        display: none;
+      }
+    }
+  }
+
+  #best-seller{
+    .image{
+      p{
+        span{
+          margin-left: 140px;
+        }
+      }
+    }
+  }
+
+  #best {
+
+    .images {
+
+      .text {
+        top: 94px;
+        left: 40px;
+
+        .ptext {
+          font-size: 15px;
+        }
+
+        p {
+
+          font-size: 25px;
+        }
+      }
+
+    }
+  }
+
+  #bags{
+    .image{
+      text-align: center;
+    }
+     
+    .text{
+      text-align: start;
+      padding-left: 60px;
+    }
+  }
+
+  #watches{
+
+    .image{
+
+      .text{
+
+        h1{
+          font-size: 40px;
+        }
+
+        p{
+          font-size: 20px;
+          width: 570px;
+        }
+      }
+    }
+  }
+
+  #suits{
+    .image{
+      text-align: center;
+    }
+   
+    .clicks{
+
+     .arrow{
+      display: none;
+    }  
+    }
+   
+  } 
+
+  #tommy{
+   
+    .image{
+
+      img{
+        width: 100%;
+      }
+     
+      .text{
+
+        h1{
+          font-size: 40px;
+        }
+
+        p{
+          font-size: 20px;
+          width: 570px;
+        }
+      }
+    }
+  }
+
+  #newsletter {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    .text {
+      h1 {
+        margin-left: 30px;
+        font-size: 40px;
+
+      }
+    }
+
+    .ptext {
+      p {
+        margin-right: 50px;
+        font-size: 20px;
+
+      }
+    }
+
+    form {
+      margin-left: 20px;
+
+      #email {
+        width: 60%;
+      }
+
+      #submit {
+        width: 50%;
+      }
+    }
+  }
+
+  footer{
+    height: 135vh;
+
+    .content{
+      flex-flow: column;
+      .text{
+        p{
+          width: 180px;
+        }
+      }
+
+      .text-one{
+        ul{
+          width: 180px;
+        }
+      }
+
+      .text-two{
+        margin-top: -50px;
+        ul{
+          width: 180px;
+        }
+      }
+    }
+  }
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+
+  nav {
+
+    .navbar {
+      img{
+        width: 50px;
+      }
+
+      .nav-items {
+
+        img{
+          width: 35px;
+        }
+
+        .burger {
+          width:30px;
+          height: 30px;
+
+        div {
+          width: 30px;
+          
+          &::before {
+            content: '';
+            width: 30px;
+          }
+
+          &::after {
+            content: '';
+            width: 30px; 
+
+          }
+        }
+      
+
+        }
+      }
+    }
+  }
+
+  #hero{
+   
+    .hero-inner{
+      
+     h1{
+      font-size: 40px;
+      padding-top: 280px;
+     }
+
+     p{
+      font-size: 18px;
+     }
+
+     .one{
+      width: 173px;
+      height: 56px;
+      font-size: 20px;
+     }
+
+     .two {
+      margin-left: 10px;
+      width: 173px;
+      height: 56px;
+      font-size: 20px;
+    }
+    }
+    
+  }
+
+  #latest{
+    .image{
+      text-align: center;
+
+      .text{
+        text-align: start;
+        padding-left: 110px;
+      }
+    }
+
+    .clicks{
+
+      .arrow{
+        display: none;
+      }
+    }
+  }
+
+  #best-seller{
+    .image{
+      p{
+        span{
+          margin-left: 140px;
+        }
+      }
+    }
+  }
+
+  #best {
+
+    .images {
+
+      .text {
+        top: 94px;
+        left: 40px;
+
+        .ptext {
+          font-size: 15px;
+        }
+
+        p {
+
+          font-size: 25px;
+        }
+      }
+
+    }
+  }
+
+  #bags{
+    .image{
+      text-align: center;
+    }
+     
+    .text{
+      text-align: start;
+      padding-left: 60px;
+    }
+  }
+
+  #watches{
+
+    .image{
+
+      .text{
+
+        h1{
+          font-size: 40px;
+        }
+
+        p{
+          font-size: 20px;
+          width: 570px;
+        }
+      }
+    }
+  }
+
+  #suits{
+    .image{
+      text-align: center;
+    }
+   
+    .clicks{
+
+     .arrow{
+      display: none;
+    }  
+    }
+   
+  } 
+
+  #tommy{
+
+    .image{
+
+      .text{
+
+        h1{
+          font-size: 40px;
+        }
+
+        p{
+          font-size: 20px;
+          width: 570px;
+        }
+      }
+    }
+  }
+
+  #newsletter {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    .text {
+      h1 {
+        margin-left: 30px;
+        font-size: 40px;
+
+      }
+    }
+
+    .ptext {
+      p {
+        margin-right: 50px;
+        font-size: 20px;
+
+      }
+    }
+
+    form {
+      margin-left: 20px;
+
+      #email {
+        width: 60%;
+      }
+
+      #submit {
+        width: 50%;
+      }
+    }
+  }
+
+  footer{
+    height: 135vh;
+
+    .content{
+      flex-flow: column;
+      .text{
+        p{
+          width: 180px;
+        }
+      }
+
+      .text-one{
+        ul{
+          width: 180px;
+        }
+      }
+
+      .text-two{
+        margin-top: -50px;
+        ul{
+          width: 180px;
+        }
+      }
+    }
+  }
+}
